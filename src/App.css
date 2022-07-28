@@ -1,38 +1,132 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background: gray;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+  background: white;
+  border-radius: 7px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+
+.container {
+  min-width: 300px;
+  margin: 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 140px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.field label {
+  padding-bottom: 5px;
+}
+
+.field input,
+.review-value {
+  border: 1px solid #d2d2d7;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.review-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.review-field label {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.field ul {
+  position: absolute;
+  top: 22px;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #d2d2d7;
+  width: 100%;
+  background: white;
+  z-index: 999;
+  list-style-type: none;
+  border-radius: 5px;
+}
+
+.field li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #d2d2d7;
+  cursor: pointer;
+}
+
+.field li:last-of-type {
+  border-bottom: none;
+}
+
+.title {
+  font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 980px;
+  background: #0071e3;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.17648;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+  min-width: 28px;
+  padding: 18px 31px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border-radius: 12px;
+  white-space: normal;
+  border: none;
+  text-decoration: none;
+}
+
+.disabled-button {
+  background: gray;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.divider {
+  border-bottom: 1px solid #d2d2d7;;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.field-error {
+  font-size: 12px;
+  color: red;
+  margin-top: 4px;
 }
